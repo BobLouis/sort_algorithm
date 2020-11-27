@@ -21,11 +21,6 @@ int split(int a[],int low,int high,int pivot){
             swap(&a[high],&a[low]);
         }
     }
-//    for(int i=0;i<9;i++){
-//        printf("%d ",a[i]);
-//    }
-//    printf("   index=%d ",high);
-//    printf("\n");
     return low;
 }
 void sort(int a[] ,int low,int high){
@@ -36,7 +31,6 @@ void sort(int a[] ,int low,int high){
     pivot=(low+high)/2;
     index=split(a,low,high,pivot);
     sort(a,low,index-1);
-//    printf("sort high");
     sort(a,index+1,high);
 }
 
@@ -45,9 +39,6 @@ int main() {
     int a[] = {3, 1, 5, 4, 2, 9, 8, 7, 6,44,33,35,32,11,23,15};
     int index, pivot;
     sort(a, 0, N - 1);
-//    pivot=(N-1)/2;
-//    index=split(a,0,N-1,pivot);
-    // list<int n>
     for(int i=0;i<N;i++){
         printf("%d ",a[i]);
     }
